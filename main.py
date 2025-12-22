@@ -2,10 +2,14 @@ from src.data_loader import StockNewsDataLoader
 from src.news_analyzer import NewsAnalyzer
 from src.analysis_utils import DataQualityChecker, BaselineModel, StatisticalAnalyzer, NewsRankingAnalyzer
 import numpy as np
+import os
 import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# ensure images directory exists
+os.makedirs('images', exist_ok=True)
 
 def main():
     # Set style for all plots
@@ -137,7 +141,7 @@ def main():
         plt.xticks(range(len(topic_sizes)), list(topic_sizes.keys()), rotation=45)
         plt.ylabel('Total Term Frequency')
         plt.tight_layout()
-        plt.savefig('topic_distribution.png')
+        plt.savefig(os.path.join('images', 'topic_distribution.png'))
         plt.close()
         
         print("\nDetailed Topic Analysis:")
@@ -157,7 +161,7 @@ def main():
         plt.grid(True)
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.savefig('market_volatility.png')
+        plt.savefig(os.path.join('images', 'market_volatility.png'))
         plt.close()
         
     except FileNotFoundError:

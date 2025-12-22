@@ -23,10 +23,15 @@ def ensure_dirs():
 
 
 def copy_image(name):
+    # check both project root and images/ folder
     src = Path(name)
+    alt = Path('images') / name
     if src.exists():
         shutil.copy(src, IMAGES_DIR / src.name)
         return f'images/{src.name}'
+    if alt.exists():
+        shutil.copy(alt, IMAGES_DIR / alt.name)
+        return f'images/{alt.name}'
     return None
 
 

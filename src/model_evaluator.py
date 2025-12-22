@@ -60,7 +60,9 @@ class ModelEvaluator:
         plt.title('Receiver Operating Characteristic (ROC) Curve')
         plt.legend(loc="lower right")
         plt.grid(True)
-        plt.savefig('roc_curve.png')
+        import os
+        os.makedirs('images', exist_ok=True)
+        plt.savefig(os.path.join('images', 'roc_curve.png'))
         plt.close()
     
     def plot_confusion_matrix(self, y_true: np.ndarray, y_pred: np.ndarray) -> None:
@@ -83,7 +85,9 @@ class ModelEvaluator:
                     color="white" if cm[i, j] > thresh else "black")
         
         plt.colorbar()
-        plt.savefig('confusion_matrix.png')
+        import os
+        os.makedirs('images', exist_ok=True)
+        plt.savefig(os.path.join('images', 'confusion_matrix.png'))
         plt.close()
     
     def perform_cross_validation(self, model: Any, X: np.ndarray, y: np.ndarray, 

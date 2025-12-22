@@ -46,6 +46,10 @@ env/
 env.bak/
 venv.bak/
 
+# Additional local virtualenvs used for testing
+.venv_test/
+.venv*/
+
 # IDE/editor settings
 .vscode/
 .idea/
@@ -57,6 +61,21 @@ Thumbs.db
 
 # Notebook checkpoints
 .ipynb_checkpoints/
+
+# Local caches, editors, tooling
+.mypy_cache/
+.pytest_cache/
+.ropeproject/
+
+# Data and large artifacts
+# Keep CSV/XLSX dataset files tracked in `data/` (this repo contains a snapshot).
+# Ignore large archive files only
+data/*.zip
+
+# Local environment and secret files
+.env
+.env.*
+
 
 # Database files
 *.sqlite3

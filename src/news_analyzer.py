@@ -193,6 +193,8 @@ class NewsAnalyzer:
         ax2.set_title('Top Negative Impact Words (with frequencies)', pad=20)
         ax2.set_xlabel('Impact Score')
         
+        import os
+        os.makedirs('images', exist_ok=True)
         plt.tight_layout()
-        plt.savefig('word_influence.png')
+        plt.savefig(os.path.join('images', 'word_influence.png'))
         plt.close()
