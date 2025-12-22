@@ -1,0 +1,95 @@
+# .gitignore for Python / Streamlit project
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+share/python-wheels/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.pytest_cache/
+.tox/
+coverage.xml
+,coverage
+htmlcov/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env/
+.venv/
+env.bak/
+venv.bak/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files (uncomment if you want to track cleaned or smaller datasets)
+# If you want to keep source/raw data out of git, keep the next line. Remove it if you want dataset tracked.
+data/
+
+# Project documentation and large docs folder
+Project_Docs/
+
+# Generated images and artifacts (plots, saved figures)
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# Excel files and large binaries
+*.xlsx
+*.xls
+
+# Database files
+*.sqlite3
+*.db
+
+# Streamlit local files
+.streamlit/
+
+# Local env files
+.env
+.env.*
+
+# misc
+*.log
+
+# Notes:
+# - Adjust the 'data/' line if you want to track specific data files. You can create a
+#   data/.gitkeep or a README in `data/` to document how to obtain datasets.
+# - Consider removing image/Excel patterns if you prefer to version small generated plots.
