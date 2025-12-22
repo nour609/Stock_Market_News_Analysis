@@ -58,23 +58,6 @@ Thumbs.db
 # Notebook checkpoints
 .ipynb_checkpoints/
 
-# Data files (uncomment if you want to track cleaned or smaller datasets)
-# If you want to keep source/raw data out of git, keep the next line. Remove it if you want dataset tracked.
-data/
-
-# Project documentation and large docs folder
-Project_Docs/
-
-# Generated images and artifacts (plots, saved figures)
-*.png
-*.jpg
-*.jpeg
-*.svg
-
-# Excel files and large binaries
-*.xlsx
-*.xls
-
 # Database files
 *.sqlite3
 *.db
