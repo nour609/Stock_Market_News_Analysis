@@ -34,21 +34,16 @@ pip-delete-this-directory.txt
 .pytest_cache/
 .tox/
 coverage.xml
-,coverage
+.coverage
 htmlcov/
 
 # Virtual environments
 venv/
 ENV/
 env/
-.env/
-.venv/
+.venv*
 env.bak/
 venv.bak/
-
-# Additional local virtualenvs used for testing
-.venv_test/
-.venv*/
 
 # IDE/editor settings
 .vscode/
@@ -64,7 +59,6 @@ Thumbs.db
 
 # Local caches, editors, tooling
 .mypy_cache/
-.pytest_cache/
 .ropeproject/
 
 # Data and large artifacts
@@ -76,7 +70,6 @@ data/*.zip
 .env
 .env.*
 
-
 # Database files
 *.sqlite3
 *.db
@@ -84,9 +77,7 @@ data/*.zip
 # Streamlit local files
 .streamlit/
 
-# Local env files
-.env
-.env.*
+ 
 
 # misc
 *.log
