@@ -35,6 +35,11 @@ Run the main script:
 python main.py
 ```
 
+## Run the app
+C:\dev\Teluq\SCI1402\.venv\Scripts\streamlit.exe run app.py
+
+C:/dev/Teluq/SCI1402/.venv/Scripts/python.exe main.py
+
 ## Features
 
 - Load and preprocess stock market news data
