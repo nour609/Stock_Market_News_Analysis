@@ -13,16 +13,6 @@ https://www.kaggle.com/datasets/aaron7sun/stocknews/data
 ├── main.py             # CLI entry point for analysis
 └── requirements.txt    # Pinned Python dependencies
 ```
-## Quickstart (Windows PowerShell)
-A. Create and activate a virtual environment:
-python -m venv .venv
-
-B. Activate the virtual environment:
-.\.venv\Scripts\Activate.ps1
-
-C. Upgrade pip:
-python -m pip install --upgrade pip
-
 ## Quickstart (macOS / Linux)
 
 1. Create and activate a virtual environment:
@@ -75,10 +65,15 @@ python main.py
 ## Quickstart (Windows PowerShell)
 
 ```powershell
+# Create a virtual environment and activate it
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
+# Upgrade pip and install Windows-specific requirements
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements-windows.txt
+
+# Run the analysis
 python main.py
 ```
 
@@ -106,6 +101,10 @@ conda activate teluqlab
 conda install pip
 pip install -r requirements.txt
 ```
+
+- Windows notes: ensure your PowerShell virtual environment is activated (use `\.venv\Scripts\Activate.ps1`) before installing packages. If you see errors like `ModuleNotFoundError: No module named 'pandas'`, it usually means the environment wasn't activated or packages were installed into a different Python interpreter.
+
+  Quick fix: install Miniconda/Miniforge and use conda-forge to get binary packages: `conda create -n teluqlab python=3.11 && conda activate teluqlab && conda install -c conda-forge numpy pandas matplotlib scipy scikit-learn nltk wordcloud` (this usually avoids compilation errors). For packages that still fail to build, install the Microsoft Visual C++ Build Tools.
 
 - To run a single script directly (without virtualenv), ensure your system Python has the packages installed.
 
