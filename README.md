@@ -13,6 +13,15 @@ https://www.kaggle.com/datasets/aaron7sun/stocknews/data
 ├── main.py             # CLI entry point for analysis
 └── requirements.txt    # Pinned Python dependencies
 ```
+## Quickstart (Windows PowerShell)
+A. Create and activate a virtual environment:
+python -m venv .venv
+
+B. Activate the virtual environment:
+.\.venv\Scripts\Activate.ps1
+
+C. Upgrade pip:
+python -m pip install --upgrade pip
 
 ## Quickstart (macOS / Linux)
 
