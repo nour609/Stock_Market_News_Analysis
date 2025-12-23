@@ -104,8 +104,6 @@ pip install -r requirements.txt
 
 - Windows notes: ensure your PowerShell virtual environment is activated (use `\.venv\Scripts\Activate.ps1`) before installing packages. If you see errors like `ModuleNotFoundError: No module named 'pandas'`, it usually means the environment wasn't activated or packages were installed into a different Python interpreter.
 
-  Quick fix: install Miniconda/Miniforge and use conda-forge to get binary packages: `conda create -n teluqlab python=3.11 && conda activate teluqlab && conda install -c conda-forge numpy pandas matplotlib scipy scikit-learn nltk wordcloud` (this usually avoids compilation errors). For packages that still fail to build, install the Microsoft Visual C++ Build Tools.
-
 - To run a single script directly (without virtualenv), ensure your system Python has the packages installed.
 
 ## Files ignored by Git
